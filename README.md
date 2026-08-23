@@ -1,1 +1,10 @@
-# CS2558-2Journal
+# CS-255 8-2 Journal — README Reflection
+The DriverPass project was for a driving school client that wanted to expand from a single physical location into an online system that could handle scheduling driving lessons, managing customer accounts, running practice tests, and tracking DMV updates, all while giving different levels of access to customers, the secretary, drivers, and the IT/owner staff. My job was to gather their requirements, design the system, and communicate that design back to both the development team and the client.
+
+I think what I did particularly well was keeping the design traceable back to the actual interview transcript rather than inventing generic requirements — every use case, actor, and technical requirement I included had a direct line back to something DriverPass actually said they needed, like the online/offline data constraint or the unique naming rule for accounts.
+
+If I could revise one part, I'd go back and tighten up the class diagram relationships, particularly around how Employee represents both the Owner and IT Officer roles. It works, but a cleaner design might separate those into their own subclasses with more distinct permissions rather than lumping them under one class with a generic "role" attribute.
+
+Interpreting the user's needs meant really sitting with the interview transcript and picking out not just what DriverPass explicitly asked for, but the "why" behind it, like why they cared about avoiding data redundancy across servers, or why the secretary needed the same booking permissions as customers. Considering user needs matters because a technically correct system that doesn't actually match how the client works day-to-day isn't useful to them, no matter how clean the code is.
+
+Going forward, my approach to designing software starts with requirements gathering grounded in the client's actual words, then moves to modeling the system from multiple UML perspectives (use case, class, activity, sequence) before writing any code, since each diagram type catches different gaps in the design that the others miss.
